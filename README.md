@@ -229,42 +229,6 @@ Read-Host "Press Enter to Exit"
 
 ---
 
-## 📊 Output Behavior
-
-After execution, the script will:
-
-* Run a network speed test via CLI
-* Detect internal and external IP addresses
-* Classify network based on IP range
-* Generate a structured Excel report
-* Apply formatting (borders, table style, freeze header)
-* Automatically open the generated report
-
----
-
-## 📁 Output Location
-
-All reports are saved to:
-
-* 📍 User Desktop
-* 📄 Filename format:
-
-  ```
-  Network_Speed_Test_<SSID>_<DateTime>.xlsx
-  ```
-
----
-
-## 🚨 Error Handling
-
-The script includes built-in validation:
-
-* ❌ Speedtest CLI missing → exits with error message
-* ❌ No CLI response → throws exception
-* ❌ Execution failure → displays error and exits safely
-
----
-
 ## 🧩 Dependencies
 
 * PowerShell Module:
@@ -274,3 +238,95 @@ The script includes built-in validation:
 
 ---
 
+# 🚀 Execution Guide
+
+## 🛠️ Step-by-Step Execution Guide
+
+### 1. 📁 Save the Script
+
+Save the PowerShell script file as:
+
+```text
+Traceroute Report.ps1
+```
+
+Ensure the file is stored in a known directory (e.g., Desktop or Documents).
+
+---
+
+### 2. ▶️ Run the Script
+
+You can execute the script using one of the following methods:
+
+#### Option A — Right-click Execution (GUI Method)
+
+* Right-click on `Network Speed Test Automation From using the Ookla Speedtest CLI v4.ps1`
+* Select **“Run with PowerShell”**
+* The PowerShell window will open and start execution automatically
+
+---
+
+#### Option B — PowerShell Terminal (Recommended)
+
+1. Open **PowerShell**
+2. Navigate to the script location:
+
+```powershell
+cd $env:USERPROFILE\Desktop
+```
+
+3. Run the script:
+
+```powershell
+.\Network Speed Test Automation From using the Ookla Speedtest CLI v4.ps1
+```
+
+---
+
+## ⏳ 3. Wait for Execution to Complete
+
+During execution:
+
+* System and network details will be collected automatically
+* No user interaction is required during processing
+
+> [!NOTE]
+> Execution time may vary depending on network latency and system performance.
+
+---
+
+## 📊 4. Successful Completion Output
+
+Once the script finishes successfully:
+
+* An **Excel (.xlsx) report** will be generated automatically
+* The file will be saved on the **Desktop**
+
+Example output:
+
+```text
+Network_Speed_Test_Corporate_Office_Report_July_05_2026.xlsx
+```
+
+---
+
+## 📁 5. View the Report
+
+* Navigate to your **Desktop**
+* Open the generated `.xlsx` file using:
+
+  * Microsoft Excel
+  * LibreOffice Calc (optional)
+  * Any compatible spreadsheet application
+
+---
+
+## ⚠️ Important Notes
+
+> [!WARNING]
+> Do not close the PowerShell window during execution, as this will interrupt traceroute collection.
+
+> [!TIP]
+> If execution fails, try running PowerShell as **Administrator** for better network access permissions.
+
+---
